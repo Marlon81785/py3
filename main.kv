@@ -1,0 +1,223 @@
+<ScreenManagement>:
+    PaginaInicial:
+    LabelConfig:
+    Ferritina:
+    Ist:
+    Resultado:
+
+<PaginaInicial>:
+    name: 'paginaInicial'
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 40               
+
+        Label:
+            text: 'Nefro Clinicas'
+            font_size: 30
+            size_hint: [1,.35]
+ 
+        Button:
+            id: btrenov
+            on_release: app.root.switch_to_labelConfig()
+            text: 'Renovacao'
+            font_size: 20
+            size_hint: [1,.35]
+            
+        Label:
+            text: ''
+            size_hint: [.5,.1]
+            
+            
+
+        Button:
+            id:btini
+            on_release: app.root.switch_to_labelConfig2()
+            text: 'Inicial'
+            font_size: 20
+            size_hint: [1,.35]
+
+        Label:
+            text: ''
+            size_hint: [.5,.3]
+
+        Button:
+            on_release: app.root.switch_to_exit()
+            text: 'Sair'
+            font_size: 20
+            size_hint: [1,.1]
+
+
+
+<LabelConfig>:
+    name: 'labelConfig'
+    
+    
+
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 40
+
+        Label:
+            text: 'Hemoglobina'
+            font_size: 20
+            size_hint: [1,.2]
+
+        TextInput:
+            id: teste
+            text: ''
+            input_filter: 'float'
+            font_size: 20
+            size_hint: [1,.1]
+            multiline: False
+
+        Label:
+            text: ''
+            size_hint: [1,.3]
+
+        Button:
+            on_release: app.root.switch_to_ferritina()
+            text: 'Proximo'
+            font_size: 20
+            size_hint: [1,.1]
+
+        Label:
+            text: ''
+            size_hint: [1,.02]
+
+        Button:
+            on_release: app.root.switch_to_paginaInicial()
+            text: 'Voltar'
+            font_size: 20
+            size_hint: [1,.1]
+            
+
+
+
+<Ferritina>:
+    name: 'ferritina'
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 40
+
+        Label:
+            text: 'Ferritina'
+            font_size: 20
+            size_hint: [1,.2]
+
+        TextInput:
+            id:ferro
+            text: ''
+            font_size: 20
+            size_hint: [1,.1]
+            multiline: False
+            input_filter: 'float'
+
+        Label:
+            text: ''
+            size_hint: [1,.3]
+
+        Button:
+            on_release: app.root.switch_to_Ist()
+            text: 'Proximo'
+            font_size: 20
+            size_hint: [1,.1]
+
+        Label:
+            text: ''
+            size_hint: [1,.02]
+
+        Button:
+            on_release: app.root.switch_to_labelConfig()
+            text: 'Voltar'
+            font_size: 20
+            size_hint: [1,.1]
+
+
+
+
+
+
+<Ist>:
+    name: 'ist'
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 40
+
+        Label:
+            text: 'IST'
+            font_size: 20
+            size_hint: [1,.2]
+
+        TextInput:
+            id:ist_id
+            text: ''
+            font_size: 20
+            size_hint: [1,.1]
+            multiline: False
+            input_filter: 'float'
+            
+
+        Label:
+            text: ''
+            size_hint: [1,.3]
+
+        Button:
+            on_release: app.root.switch_to_resultado()
+            text: 'Proximo'
+            font_size: 20
+            size_hint: [1,.1]
+
+        Label:
+            text: ''
+            size_hint: [1,.02]
+
+        Button:
+            on_release: app.root.switch_to_paginaInicial()
+            text: 'Voltar'
+            font_size: 20
+            size_hint: [1,.1]   
+
+
+
+<Resultado>:
+    name: 'resultado'
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 40
+              
+
+        Label:
+            id:txt1
+            text: ''
+            
+
+        Label:
+            id:txt2
+            text: ''
+
+        Label:
+            id:txt3
+            text: ''
+
+        Label:
+            id:txt4
+            text: ''
+
+        Label:
+            id:txt5
+            text: ''
+
+        Label:
+            id:txt6
+            text: ''
+
+        Label:
+            id:txt7
+            text: ''
+
+        Button:
+            on_release: app.root.switch_to_paginaInicial()
+            text: 'Voltar a tela incial'    
+
+
+
